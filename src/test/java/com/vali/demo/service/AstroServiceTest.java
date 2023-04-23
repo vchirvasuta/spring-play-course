@@ -31,4 +31,18 @@ class AstroServiceTest {
         );
     }
 
+    @Test
+    void getAstronautsWC() {
+        AstroResult result = service.getAstronautsWC();
+        int number = result.getNumber();
+        System.out.println("There are " + number + " people in space");
+
+        List<Assignment> people = result.getPeople();
+
+        assertAll(
+                () -> assertTrue(number>=0),
+                () -> assertEquals(number, people.size())
+        );
+    }
+
 }
