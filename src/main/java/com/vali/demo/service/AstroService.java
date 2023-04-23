@@ -34,7 +34,7 @@ public class AstroService {
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
                 .bodyToMono(AstroResult.class)
-                .block(Duration.ofSeconds(2));
+                .block(Duration.ofSeconds(30));
     }
 
 }
